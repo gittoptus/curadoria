@@ -10,7 +10,7 @@ type PageShellProps = {
 
 export function PageShell({ title, description, children }: PageShellProps) {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-white text-slate-950">
       <AppSidebar />
 
       <main className="lg:pl-72">
