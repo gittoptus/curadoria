@@ -5,26 +5,26 @@ type StatusBadgeProps = {
 }
 
 const statusStyles: Record<string, string> = {
-  approved: 'bg-emerald-500/10 text-emerald-100 ring-emerald-500/20',
-  active: 'bg-emerald-500/10 text-emerald-100 ring-emerald-500/20',
-  done: 'bg-emerald-500/10 text-emerald-100 ring-emerald-500/20',
-  partial: 'bg-amber-500/10 text-amber-100 ring-amber-500/20',
-  pending: 'bg-amber-500/10 text-amber-100 ring-amber-500/20',
-  review: 'bg-blue-500/10 text-blue-100 ring-blue-500/20',
-  todo: 'bg-blue-500/10 text-blue-100 ring-blue-500/20',
-  doing: 'bg-cyan-500/10 text-cyan-100 ring-cyan-500/20',
-  rejected: 'bg-rose-500/10 text-rose-100 ring-rose-500/20',
-  error: 'bg-rose-500/10 text-rose-100 ring-rose-500/20',
-  paused: 'bg-slate-500/10 text-slate-200 ring-slate-500/20',
-  backlog: 'bg-violet-500/10 text-violet-100 ring-violet-500/20',
+  approved: 'bg-emerald-50 text-emerald-700 ring-emerald-200',
+  active: 'bg-emerald-50 text-emerald-700 ring-emerald-200',
+  done: 'bg-emerald-50 text-emerald-700 ring-emerald-200',
+  partial: 'bg-amber-50 text-amber-700 ring-amber-200',
+  pending: 'bg-amber-50 text-amber-700 ring-amber-200',
+  review: 'bg-blue-50 text-blue-700 ring-blue-200',
+  todo: 'bg-blue-50 text-blue-700 ring-blue-200',
+  doing: 'bg-cyan-50 text-cyan-700 ring-cyan-200',
+  rejected: 'bg-rose-50 text-rose-700 ring-rose-200',
+  error: 'bg-rose-50 text-rose-700 ring-rose-200',
+  paused: 'bg-slate-100 text-slate-700 ring-slate-200',
+  backlog: 'bg-[#b15cdc]/10 text-[#b15cdc] ring-[#b15cdc]/20',
 }
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   return (
     <span
       className={cn(
-        'inline-flex rounded-full px-3 py-1 text-xs font-medium ring-1',
-        statusStyles[status] ?? 'bg-white/5 text-slate-300 ring-white/10'
+        'inline-flex rounded-full px-3 py-1 text-xs font-semibold ring-1',
+        statusStyles[status] ?? 'bg-slate-100 text-slate-700 ring-slate-200'
       )}
     >
       {status}
