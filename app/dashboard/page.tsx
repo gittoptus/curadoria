@@ -2,6 +2,7 @@ import { AlertTriangle, Bot, CheckCircle2, GaugeCircle, Sparkles } from 'lucide-
 import { PageShell } from '@/components/layout/page-shell'
 import { KpiCard } from '@/components/dashboard/kpi-card'
 import { interactions, kpis } from '@/data/mock-data'
+import { StatusBadge } from '@/components/shared/status-badge'
 
 export default function DashboardPage() {
   return (
@@ -13,42 +14,42 @@ export default function DashboardPage() {
         <KpiCard
           title="Interações analisadas"
           value={kpis.interactions}
-          icon={<Bot className="h-5 w-5 text-blue-300" />}
+          icon={<Bot className="h-5 w-5" />}
         />
 
         <KpiCard
           title="Taxa de aprovação"
           value={kpis.approvalRate}
-          icon={<CheckCircle2 className="h-5 w-5 text-emerald-300" />}
+          icon={<CheckCircle2 className="h-5 w-5" />}
         />
 
         <KpiCard
           title="Pendências"
           value={kpis.pendingReviews}
-          icon={<AlertTriangle className="h-5 w-5 text-amber-300" />}
+          icon={<AlertTriangle className="h-5 w-5" />}
         />
 
         <KpiCard
           title="Falhas em automações"
           value={kpis.failedAutomations}
-          icon={<Sparkles className="h-5 w-5 text-rose-300" />}
+          icon={<Sparkles className="h-5 w-5" />}
         />
 
         <KpiCard
           title="Score médio"
           value={kpis.averageScore}
-          icon={<GaugeCircle className="h-5 w-5 text-cyan-300" />}
+          icon={<GaugeCircle className="h-5 w-5" />}
         />
       </div>
 
       <div className="mt-8 grid gap-6 xl:grid-cols-[1.5fr,1fr]">
-        <section className="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <div className="mb-6 flex items-center justify-between">
             <div>
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="text-lg font-semibold text-slate-950">
                 Últimas interações analisadas
               </h2>
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-slate-500">
                 Interações recentes processadas pela operação.
               </p>
             </div>
@@ -58,24 +59,22 @@ export default function DashboardPage() {
             {interactions.map((interaction) => (
               <div
                 key={interaction.id}
-                className="rounded-xl border border-white/10 bg-slate-900/70 p-4"
+                className="rounded-xl border border-slate-200 bg-slate-50 p-4"
               >
                 <div className="mb-2 flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-white">
+                    <p className="text-sm font-semibold text-slate-900">
                       {interaction.source}
                     </p>
-                    <p className="text-xs text-slate-500">
+                    <p className="text-xs text-slate-400">
                       {interaction.id}
                     </p>
                   </div>
 
-                  <span className="rounded-full bg-blue-500/10 px-3 py-1 text-xs text-blue-200 ring-1 ring-blue-400/20">
-                    {interaction.status}
-                  </span>
+                  <StatusBadge status={interaction.status} />
                 </div>
 
-                <p className="text-sm text-slate-300">
+                <p className="text-sm text-slate-600">
                   {interaction.userInput}
                 </p>
               </div>
@@ -83,26 +82,26 @@ export default function DashboardPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-lg font-semibold text-white">
+        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="text-lg font-semibold text-slate-950">
             Insights operacionais
           </h2>
 
           <div className="mt-6 space-y-4">
-            <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-              <p className="text-sm font-medium text-emerald-200">
+            <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+              <p className="text-sm font-medium text-emerald-700">
                 A taxa de aprovação cresceu 6,2% nos últimos 30 dias.
               </p>
             </div>
 
-            <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-4">
-              <p className="text-sm font-medium text-amber-100">
+            <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+              <p className="text-sm font-medium text-amber-700">
                 3 automações apresentaram falha crítica nas últimas execuções.
               </p>
             </div>
 
-            <div className="rounded-xl border border-blue-500/20 bg-blue-500/10 p-4">
-              <p className="text-sm font-medium text-blue-100">
+            <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+              <p className="text-sm font-medium text-blue-700">
                 O módulo financeiro concentra o maior volume de interações.
               </p>
             </div>
