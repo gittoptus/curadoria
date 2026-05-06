@@ -2,6 +2,7 @@ import { PageShell } from '@/components/layout/page-shell'
 import { SectionCard } from '@/components/shared/section-card'
 import { StatusBadge } from '@/components/shared/status-badge'
 import { prompts } from '@/data/mock-data'
+import { ui } from '@/lib/theme'
 
 export default function PromptsPage() {
   return (
@@ -15,16 +16,13 @@ export default function PromptsPage() {
       >
         <div className="space-y-4">
           {prompts.map((prompt) => (
-            <div
-              key={prompt.name}
-              className="rounded-xl border border-white/10 bg-slate-900/70 p-5"
-            >
-              <div className="mb-4 flex items-start justify-between">
+            <div key={prompt.name} className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-base font-semibold text-slate-950">
                     {prompt.name}
                   </h3>
-                  <p className="mt-1 text-sm text-slate-400">
+                  <p className="mt-1 text-sm leading-relaxed text-slate-600">
                     {prompt.description}
                   </p>
                 </div>
@@ -34,23 +32,23 @@ export default function PromptsPage() {
 
               <div className="grid gap-4 text-sm md:grid-cols-4">
                 <div>
-                  <p className="text-slate-500">Versão</p>
-                  <p className="mt-1 text-white">{prompt.version}</p>
+                  <p className="font-medium text-slate-500">Versão</p>
+                  <p className="mt-1 font-semibold text-slate-950">{prompt.version}</p>
                 </div>
 
                 <div>
-                  <p className="text-slate-500">Owner</p>
-                  <p className="mt-1 text-white">{prompt.owner}</p>
+                  <p className="font-medium text-slate-500">Owner</p>
+                  <p className="mt-1 font-semibold text-slate-950">{prompt.owner}</p>
                 </div>
 
                 <div>
-                  <p className="text-slate-500">Taxa aprovação</p>
-                  <p className="mt-1 text-white">{prompt.approvalRate}</p>
+                  <p className="font-medium text-slate-500">Taxa aprovação</p>
+                  <p className="mt-1 font-semibold text-slate-950">{prompt.approvalRate}</p>
                 </div>
 
                 <div>
-                  <p className="text-slate-500">Última atualização</p>
-                  <p className="mt-1 text-white">{prompt.updatedAt}</p>
+                  <p className="font-medium text-slate-500">Última atualização</p>
+                  <p className="mt-1 font-semibold text-slate-950">{prompt.updatedAt}</p>
                 </div>
               </div>
             </div>
