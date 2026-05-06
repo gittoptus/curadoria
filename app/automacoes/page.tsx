@@ -17,14 +17,14 @@ export default function AutomacoesPage() {
           {automations.map((automation) => (
             <div
               key={automation.name}
-              className="rounded-xl border border-white/10 bg-slate-900/70 p-5"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-5"
             >
-              <div className="mb-5 flex items-start justify-between">
+              <div className="mb-5 flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-base font-semibold text-slate-950">
                     {automation.name}
                   </h3>
-                  <p className="mt-1 text-sm text-slate-400">
+                  <p className="mt-1 text-sm leading-relaxed text-slate-600">
                     {automation.description}
                   </p>
                 </div>
@@ -34,23 +34,23 @@ export default function AutomacoesPage() {
 
               <div className="grid gap-4 text-sm md:grid-cols-4">
                 <div>
-                  <p className="text-slate-500">Origem</p>
-                  <p className="mt-1 text-white">{automation.source}</p>
+                  <p className="font-medium text-slate-500">Origem</p>
+                  <p className="mt-1 font-semibold text-slate-950">{automation.source}</p>
                 </div>
 
                 <div>
-                  <p className="text-slate-500">Gatilho</p>
-                  <p className="mt-1 text-white">{automation.trigger}</p>
+                  <p className="font-medium text-slate-500">Gatilho</p>
+                  <p className="mt-1 font-semibold text-slate-950">{automation.trigger}</p>
                 </div>
 
                 <div>
-                  <p className="text-slate-500">Taxa de sucesso</p>
-                  <p className="mt-1 text-white">{automation.successRate}</p>
+                  <p className="font-medium text-slate-500">Taxa de sucesso</p>
+                  <p className="mt-1 font-semibold text-slate-950">{automation.successRate}</p>
                 </div>
 
                 <div>
-                  <p className="text-slate-500">Última execução</p>
-                  <p className="mt-1 text-white">{automation.lastRunAt}</p>
+                  <p className="font-medium text-slate-500">Última execução</p>
+                  <p className="mt-1 font-semibold text-slate-950">{automation.lastRunAt}</p>
                 </div>
               </div>
             </div>
