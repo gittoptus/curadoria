@@ -6,11 +6,40 @@ export const kpis = {
   averageScore: '8,6',
 }
 
+export const dashboardKpis = [
+  { title: 'Interações analisadas', value: '1.284', trend: '+12,8%', trendType: 'positive' },
+  { title: 'Taxa de aprovação', value: '87,4%', trend: '+6,2%', trendType: 'positive' },
+  { title: 'Pendências', value: '42', trend: '-8,1%', trendType: 'positive' },
+  { title: 'Falhas em automações', value: '3', trend: '+2', trendType: 'negative' },
+  { title: 'Score médio', value: '8,6', trend: '+0,4', trendType: 'positive' },
+]
+
 export const qualityTrend = [
-  { month: 'Jan', score: 7.8 },
-  { month: 'Fev', score: 8.1 },
-  { month: 'Mar', score: 8.3 },
-  { month: 'Abr', score: 8.6 },
+  { month: 'Jan', score: 7.8, approvalRate: 78, failures: 18 },
+  { month: 'Fev', score: 8.1, approvalRate: 81, failures: 15 },
+  { month: 'Mar', score: 8.3, approvalRate: 84, failures: 11 },
+  { month: 'Abr', score: 8.6, approvalRate: 87, failures: 8 },
+  { month: 'Mai', score: 8.7, approvalRate: 89, failures: 6 },
+]
+
+export const statusDistribution = [
+  { name: 'Aprovado', value: 874 },
+  { name: 'Parcial', value: 246 },
+  { name: 'Reprovado', value: 122 },
+  { name: 'Pendente', value: 42 },
+]
+
+export const kpisBySource = [
+  { label: 'Chatbot Financeiro', interactions: 482, approvalRate: '91%' },
+  { label: 'Assistente RH', interactions: 318, approvalRate: '86%' },
+  { label: 'Bot Comercial', interactions: 276, approvalRate: '74%' },
+  { label: 'Assistente Operacional', interactions: 208, approvalRate: '82%' },
+]
+
+export const operationalRisks = [
+  { title: 'Prompt comercial em revisão', description: 'Taxa de aprovação abaixo da média operacional.', severity: 'high' },
+  { title: 'Reprocessamento com erro', description: 'Automação crítica com sucesso de apenas 62%.', severity: 'critical' },
+  { title: 'Pendências acumuladas', description: '42 interações aguardando curadoria humana.', severity: 'medium' },
 ]
 
 export const interactions = [
