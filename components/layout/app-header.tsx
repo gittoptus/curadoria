@@ -14,7 +14,7 @@ export function AppHeader({ title, description }: AppHeaderProps) {
       </div>
 
       <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#b15cdc]/10 text-sm font-semibold text-[#b15cdc] ring-1 ring-[#b15cdc]/20">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#431457]/10 text-sm font-semibold text-[#431457] ring-1 ring-[#431457]/20">
           AN
         </div>
       </div>
