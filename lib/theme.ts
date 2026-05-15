@@ -1,9 +1,9 @@
 export const theme = {
   brand: {
-    primary: '#b15cdc',
-    primaryHover: '#9f4cc8',
-    primarySoft: '#f7effb',
-    primaryBorder: '#ead5f5',
+    primary: '#431457',
+    primaryHover: '#351045',
+    primarySoft: '#f4eef7',
+    primaryBorder: '#dccae6',
   },
   surface: {
     page: 'bg-white',
@@ -37,5 +37,5 @@ export const ui = {
   title: 'text-lg font-semibold text-slate-950',
   description: 'text-sm text-slate-500',
   label: 'text-xs font-semibold uppercase tracking-wide text-slate-500',
-  brandButton: 'rounded-xl border border-[#b15cdc]/20 bg-[#b15cdc]/10 px-4 py-2 text-sm font-semibold text-[#b15cdc] transition hover:bg-[#b15cdc]/15',
+  brandButton: 'rounded-xl border border-[#431457]/20 bg-[#431457]/10 px-4 py-2 text-sm font-semibold text-[#431457] transition hover:bg-[#431457]/15',
 }
