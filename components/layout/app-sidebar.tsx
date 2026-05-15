@@ -21,17 +21,10 @@ export function AppSidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="fixed left-0 top-0 z-30 hidden h-screen w-72 border-r border-[#a14fcf] bg-[#b15cdc] px-4 py-5 lg:block">
-      <div className="mb-8 flex items-center gap-3 px-2">
-        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/20">
+    <aside className="fixed left-0 top-0 z-30 hidden h-screen w-72 border-r border-[#2f0e3d] bg-[#431457] px-4 py-5 lg:block">
+      <div className="mb-8 flex items-center justify-center px-2">
+        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/20">
           <Sparkles className="h-5 w-5" />
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold text-white">Nexus AI</p>
-          <p className="text-xs text-purple-100">
-            Curadoria inteligente
-          </p>
         </div>
       </div>
 
@@ -47,7 +40,7 @@ export function AppSidebar() {
               className={cn(
                 'flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition',
                 active
-                  ? 'bg-white text-[#b15cdc] shadow-sm'
+                  ? 'bg-white text-[#431457] shadow-sm'
                   : 'text-white/90 hover:bg-white/10 hover:text-white'
               )}
             >
